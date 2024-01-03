@@ -28,7 +28,7 @@ function TabBarIcon(props: {
 type LogadoTabsParamList = {
   Home: { route: any };
   Profile: undefined;
-  Blog: undefined;
+  Peso: undefined;
   Salas: undefined;
   Chamados: undefined;
 };
@@ -39,7 +39,7 @@ const LogadoTabs = ({ result }: any) => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Blog"
+        name="Peso"
         component={BlogScreen}
         options={{
           tabBarIcon: ({ color, size }) => (

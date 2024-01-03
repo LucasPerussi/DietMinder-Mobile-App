@@ -5,6 +5,10 @@ import { LoginStack } from '../src/types/stackParam'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSelector, useDispatch } from 'react-redux';
 import Storage from 'react-native-storage';
+// require('dotenv').config();
+
+// Agora você pode acessar a variável de ambiente assim:
+// const apiUrl = process.env.API_URL;
 
 import Animated, {FadeInUp, FadeOut} from "react-native-reanimated"
 type User = {
@@ -32,7 +36,7 @@ const LoginScreen = ({navigation}: LoginStack) => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:3000/auth/login', {
+      const response = await fetch('http://137.184.236.110:3000/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
